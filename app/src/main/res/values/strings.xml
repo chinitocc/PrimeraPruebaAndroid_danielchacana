@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Credit card form</string>
+    <string name="bt_guardar">GUARDAR</string>
+    <string name="tv_titulo">Información de la tarjeta de credito</string>
+    <string name="ht_nombre">Nombre</string>
+    <string name="ht_apellido">Apellido</string>
+    <string name="ht_numero_tarjeta">Numero de Tarjeta</string>
+    <string name="ht_mes">Mes</string>
+    <string name="ht_ano">Año</string>
+    <string name="ht_codigo">Código</string>
+    <string name="tv_direccion">Dirección</string>
+    <string name="ht_calle">Calle y Número</string>
+    <string name="ht_ciudad">Ciudad</string>
+    <string name="ht_estado">Estado</string>
+    <string name="ht_postal">Código Postal</string>
+</resources>
