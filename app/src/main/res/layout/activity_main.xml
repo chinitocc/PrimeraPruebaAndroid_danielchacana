@@ -31,7 +31,7 @@
 
     </LinearLayout>
 
-    <ScrollView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -41,6 +41,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/txt_nombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_nombre"
@@ -48,6 +49,7 @@
                 android:inputType="textPersonName"/>
 
             <EditText
+                android:id="@+id/txt_apellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_apellido"
@@ -55,6 +57,7 @@
                 android:inputType="textPersonName"/>
 
             <EditText
+                android:id="@+id/txt_tarjeta"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_numero_tarjeta"
@@ -72,6 +75,7 @@
             android:layout_marginTop="15dp">
 
             <EditText
+                android:id="@+id/txt_mes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_mes"
@@ -80,6 +84,7 @@
                 android:inputType="date"/>
 
             <EditText
+                android:id="@+id/txt_ano"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_ano"
@@ -90,6 +95,7 @@
                 android:maxLength="4"/>
 
             <EditText
+                android:id="@+id/txt_codigo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_codigo"
@@ -111,6 +117,7 @@
                 android:layout_marginTop="30dp"/>
 
             <EditText
+                android:id="@+id/txt_calle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_calle"
@@ -118,6 +125,7 @@
                 android:inputType="text"/>
 
             <EditText
+                android:id="@+id/txt_ciudad"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_ciudad"
@@ -133,6 +141,7 @@
             android:layout_marginTop="15dp">
 
             <EditText
+                android:id="@+id/txt_estado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_estado"
@@ -140,6 +149,7 @@
                 android:inputType="text"/>
 
             <EditText
+                android:id="@+id/txt_codigopostal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:hint="@string/ht_postal"
@@ -148,7 +158,26 @@
 
         </LinearLayout>
 
-    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRAR"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUSCAR"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 
 
 
