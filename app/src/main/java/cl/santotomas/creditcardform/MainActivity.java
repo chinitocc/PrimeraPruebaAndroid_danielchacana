@@ -3,6 +3,7 @@ package cl.santotomas.creditcardform;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -80,5 +81,36 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Debes llenar todos los campos", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void Buscar (View view){
+        AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "administracion", null,1);
+        SQLiteDatabase BaseDeDatabase = admin.getWritableDatabase();
+
+        String tarjeta = et_tarjeta.getText().toString();
+
+        if (!tarjeta.isEmpty()){
+            Cursor fila = BaseDeDatabase.rawQuery
+                    ("select nombre, apellido, mes, ano, codigo, calle, ciudad, estado, postal from articulos where codigo =" + tarjeta, null);
+            if (fila.moveToFirst()){
+                et_nombre.setText(fila.getString(0));
+                et_apellido.setText(fila.getString(1));
+                et_mes.setText(fila.getString(2));
+                et_ano.setText(fila.getString(3));
+                et_codigo.setText(fila.getString(4));
+                et_calle.setText(fila.getString(5));
+                et_ciudad.setText(fila.getString(6));
+                et_estado.setText(fila.getString(7));
+                et_postal.setText(fila.getString(8));
+
+                BaseDeDatabase.close();
+            } else{
+                Toast.makeText(this, "No existe el usuario", Toast.LENGTH_SHORT).show();
+                BaseDeDatabase.close();
+            }
+
+        } else{
+            Toast.makeText(this, "Debes introducir el numero de tarjeta", Toast.LENGTH_SHORT).show();
+        }
     }
 }
